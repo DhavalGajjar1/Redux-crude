@@ -13,8 +13,13 @@ function ViewEmp() {
     };
     return (
         <div>
+
             <h1 style={{ textAlign: "center" }}>Employee Records</h1>
+            <Link to="/" style={{marginLeft:"200px",border:"1px solid black",padding:"10px",backgroundColor:"black",color:"white"}}>
+                ADD Data
+            </Link>
             <table border={1} align='center'>
+
                 <tr>
                     <td>Name</td>
                     <td>Age</td>
