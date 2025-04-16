@@ -19,13 +19,17 @@ function AddEmp() {
     let submitData = (e) => {
         e.preventDefault();
         dispatch(addempdata(employee));
-        // navigate("/viewemp");
+        navigate("/viewemp");
         toast.success("Record Added Successfully");
     }
     return (
         <div>
             <h1 style={{ textAlign: "center" }}>Employee Management System</h1>
+            
             <form method="post" onSubmit={(e) => submitData(e)}>
+            <Link to="/viewemp">
+                    View Records
+                </Link>
                 <table border={1} align='center'>
                     <tr>
                         <td>Name</td>
@@ -65,9 +69,7 @@ function AddEmp() {
                     </tr>
                 </table>
                 <ToastContainer />
-                <Link to="/viewemp">
-                    View Records
-                </Link>
+            
             </form>
         </div>
     )
